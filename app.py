@@ -1,9 +1,12 @@
 import py3Dmol
 
-# Visualiza una molécula en formato SMILES
-smiles = "C1=CC=CC=C1"  # Un SMILES de ejemplo
+# Visualiza una molécula en SMILES
+smiles = "C1=CC=CC=C1"  # Ejemplo de SMILES
 viewer = py3Dmol.view(width=800, height=400)
-viewer.addModel(smiles, "smi")  # Usar SMILES directamente
+viewer.addModel(smiles, "smi")
 viewer.setStyle({"stick": {}})
 viewer.zoomTo()
-viewer.show()
+
+# Renderiza en Streamlit
+import streamlit as st
+st.write(viewer.show())
