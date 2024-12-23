@@ -1,3 +1,2 @@
 pandas
-conda install -c conda-forge rdkit
 py3Dmol
